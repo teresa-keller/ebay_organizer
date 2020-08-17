@@ -1,0 +1,2 @@
+# ebay_organizer
+The ebay organizer will allow a user to register and log in and out of their profile. The user will be able to add items they plan to list on ebay, view their currently listed items, and view sold items. The user will be able to search Ebay for similar items to get an idea of what people are willing to pay for the item. The user will also be able to view important information such as: receipts, shipping costs, and tracking information.
