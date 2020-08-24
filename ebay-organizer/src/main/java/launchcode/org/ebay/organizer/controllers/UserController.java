@@ -2,14 +2,12 @@ package launchcode.org.ebay.organizer.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("homepage")
-public class HomeController {
+public class UserController {
 
     @GetMapping
-    public String displayHomePage() {
-        return "index";
+    public String displayLoginPage() {
+        return "login";
     }
 }
