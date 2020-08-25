@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("listings")
-public class ListingController {
+@RequestMapping("search")
+public class SearchController {
 
     @GetMapping
-    public String displayAllListings() {
-        return "listings/index";
+    public String displaySearchPage() {
+        return "search/index";
     }
 }
