@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<h1 th:text="${'Listing: ' + listing.name}"></h1>
+<div>
+    <p th:text="${'ID: ' + listing.id}"></p>
+    <p th:text="${'Name: ' + listing.name}"></p>
+    <p th:text="${'Description: ' + listing.description}"></p>
+    <p th:text="${'Price: ' + listing.price}"></p>
+    <p th:text="${'Shipping Cost: ' + listing.shipping}"></p>
+</div>
+
+</body>
+</html>
