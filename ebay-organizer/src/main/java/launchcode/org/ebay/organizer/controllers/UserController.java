@@ -35,15 +35,15 @@ public class UserController {
     }
 
     @PostMapping("register")
-    public String processRegistrationForm(@ModelAttribute User user, Model model, Errors errors) {
+    public String processRegistrationForm(@ModelAttribute User newUser, Model model, Errors errors) {
 
         if (errors.hasErrors()) {
+            model.addAttribute("title", "register");
             return "register";
         }
-        model.addAttribute("user", user);
-        model.addAttribute("title", "register");
+        userRepository.save(newUser);
 
-        return "index";
+        return "/index";
     }
 
 }
