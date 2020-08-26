@@ -16,5 +16,10 @@
       <option name="name" value="MavenRepo" />
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="341b51c2-4ebb-4471-a835-0d3df1351508" />
+      <option name="name" value="341b51c2-4ebb-4471-a835-0d3df1351508" />
+      <option name="url" value="https://spring-\*" />
+    </remote-repository>
   </component>
 </project>

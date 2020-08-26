@@ -7,16 +7,16 @@
 <body>
 <form name="createListing" method="post">
     <div><label>Name:
-        <input type="text"/>
+        <input th:field="${listing.name}" type="text"/>
     </label></div>
     <div><label>Description:
-        <input type="text"/>
+        <input th:field="${listing.description}" type="text"/>
     </label></div>
     <div><label>Price:
-        <input type="number"/>
+        <input th:field="${listing.price}" type="number"/>
     </label></div>
     <div><label>Shipping:
-        <input type="number"/>
+        <input th:field="${listing.shipping}" type="number"/>
     </label></div>
     
     <input type="submit"/>

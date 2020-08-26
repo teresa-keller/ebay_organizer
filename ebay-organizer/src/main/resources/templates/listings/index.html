@@ -2,12 +2,29 @@
 <html lang="en" xmlns:th="https.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title></title>
+    <title>Listings</title>
 </head>
-<body>
-<table>
+<body class="container">
+
 <h1>Listings</h1>
-    <a href="listings/create">Create Listing</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Shipping</th>
+        </tr>
+    </thead>
+    <tr th:each="listing : ${listings}">
+        <td th:text="${listing.id}"></td>
+        <td th:text="${listing.name}"></td>
+        <td th:text="${listing.description}"></td>
+        <td th:text="${listing.price}"></td>
+        <td th:text="${listing.shipping}"></td>
+    </tr>
 </table>
+<a href="listings/create">Create Listing</a>
 </body>
 </html>
