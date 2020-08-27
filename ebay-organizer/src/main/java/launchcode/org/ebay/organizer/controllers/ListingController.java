@@ -47,20 +47,7 @@ public class ListingController {
     @GetMapping("view/{listingId}")
     public String displayViewListing(Model model, @PathVariable Integer listingId) {
         model.addAttribute("listing", listingRepository.findAll());
-//        if (listingId == 0) {
-//            model.addAttribute("listing", listingRepository.findAll());
-//        } else {
-//            Optional<Listing> optionalListing;
-//            optionalListing = listingRepository.findById(listingId);
-//
-//            if(optionalListing.isPresent()) {
-//                model.addAttribute("title", optionalListing.get().getId());
-//            }
-//            model.addAttribute("listing", optionalListing.get());
-//            return "view";
-//        }
-//        return "redirect:";
-//    }
+
         Optional optionalListing = listingRepository.findById(listingId);
         if (optionalListing.isPresent()) {
             Listing listing = (Listing) optionalListing.get();
