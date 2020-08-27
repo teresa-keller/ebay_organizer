@@ -40,8 +40,9 @@ public class ListingController {
             return "create";
         }
         listingRepository.save(newListing);
+        model.addAttribute("listing", listingRepository.findAll());
 
-        return "redirect:";
+        return "redirect:../";
     }
 
     @GetMapping("view/{listingId}")
@@ -51,7 +52,7 @@ public class ListingController {
         Optional optionalListing = listingRepository.findById(listingId);
         if (optionalListing.isPresent()) {
             Listing listing = (Listing) optionalListing.get();
-            model.addAttribute("title", ((Listing) optionalListing.get()).getId());
+            model.addAttribute("title", ((Listing) optionalListing.get()).getName());
             model.addAttribute("listing", listing);
             return "listings/view";
         } else {
