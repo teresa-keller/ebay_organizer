@@ -11,9 +11,7 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Shipping</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tr th:each="listing : ${listings}">
@@ -22,9 +20,8 @@
                 <a th:href="@{'/listings/view/' + ${listing.id}}" th:text="${listing.name}"></a>
             </p>
         </td>
-        <td th:text="${listing.description}"></td>
-        <td th:text="${listing.price}"></td>
-        <td th:text="${listing.shipping}"></td>
+
+
 
     </tr>
 </table>

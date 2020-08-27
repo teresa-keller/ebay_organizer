@@ -13,6 +13,13 @@
     <p th:text="${'Price: ' + listing.price}"></p>
     <p th:text="${'Shipping Cost: ' + listing.shipping}"></p>
 </div>
-
+<div>
+    <input type="radio" id="future" name="isListed" value="future">
+    <label for="future">Future</label><br>
+    <input type="radio" id="current" name="isListed" value="current">
+    <label for="current">Currently Listed</label><br>
+    <input type="radio" id="sold" name="isListed" value="sold">
+    <label for="sold">Sold</label>
+</div>
 </body>
 </html>
