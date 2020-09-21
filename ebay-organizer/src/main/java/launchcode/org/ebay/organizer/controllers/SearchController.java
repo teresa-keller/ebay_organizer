@@ -1,7 +1,9 @@
 package launchcode.org.ebay.organizer.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -9,7 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SearchController {
 
     @GetMapping
-    public String displaySearchPage() {
+    public String displaySearchPage(Model model) {
+        model.addAttribute("title", "Search");
+
+
+        return "search/index";
+    }
+
+    @PostMapping
+    public String processSearchPage() {
         return "search/index";
     }
 }

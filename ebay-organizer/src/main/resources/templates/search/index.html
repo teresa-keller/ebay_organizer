@@ -6,10 +6,13 @@
 </head>
 <body>
 <h1>Search</h1>
-<div>
-    <label>Search eBay
-        <input type="text" href="https://www.ebay.com/sl/sell">
-    </label>
-</div>
+<form action="https://www.ebay.com/sl/sell/ + ${search.name}/" name="search" method="post">
+    <div>
+        <label for="ebaySearch">Search eBay
+            <input type="search" id="ebaySearch" name="ebaySearch" href="https://www.ebay.com/sl/sell">
+        </label>
+        <input type="submit">
+    </div>
+</form>
 </body>
 </html>
