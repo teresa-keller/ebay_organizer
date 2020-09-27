@@ -1,4 +1,4 @@
-package launchcode.org.ebay.organizer.data;
+package launchcode.org.ebay.organizer.repositories;
 
 import launchcode.org.ebay.organizer.models.User;
 import org.springframework.data.repository.CrudRepository;

@@ -1,7 +1,7 @@
 package launchcode.org.ebay.organizer.controllers;
 
 import java.util.Optional;
-import launchcode.org.ebay.organizer.data.ListingRepository;
+import launchcode.org.ebay.organizer.repositories.ListingRepository;
 import launchcode.org.ebay.organizer.models.Listing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
