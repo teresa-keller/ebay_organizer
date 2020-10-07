@@ -9,20 +9,18 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("user")
+
 public class AuthenticationController {
 
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping
+    @GetMapping("login")
     public String displayLoginPage() {
         return "user/login";
     }
-
 
     @GetMapping("register")
     public String displayRegistrationForm(Model model) {
@@ -45,5 +43,4 @@ public class AuthenticationController {
 
         return "/index";
     }
-
 }

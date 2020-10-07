@@ -9,23 +9,18 @@
 
 <h1>Welcome to the eBay Organizer!</h1>
 
-<form name="registration" method="post">
+<div th:if="${param.error}">
+    Invalid username and password.</div>
+<div th:if="${param.logout}">
+    You have been logged out.</div>
+<form th:action="@{/login}" method="post">
     <div>
-        <h2>Login</h2>
+        <input type="text" name="username" placeholder="Username"/>
     </div>
     <div>
-        <label>Username
-            <input type="text" name="username"/>
-        </label>
+        <input type="password" name="password" placeholder="Password"/>
     </div>
-    <div>
-        <label>Password
-            <input type="password">
-        </label>
-    </div>
-    <div>
-        <input type="submit" value="Login" />
-    </div>
+    <input type="submit" value="Log in" />
 </form>
 
 </body>
