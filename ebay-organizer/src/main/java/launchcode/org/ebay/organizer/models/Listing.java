@@ -17,9 +17,7 @@ public class Listing {
     private double price;
     private double shipping;
     private String status;
-    private boolean future;
-    private boolean current;
-    private boolean sold;
+
 
     public Listing() {
     }
