@@ -64,7 +64,7 @@ public class InformationController {
             model.addAttribute("title", ((Information) optionalInformation.get()).getName());
             model.addAttribute("information", information);
             model.addAttribute("name", information.getName());
-            return "information/view";
+            return "information/index/view";
         } else {
             return "redirect:../";
         }

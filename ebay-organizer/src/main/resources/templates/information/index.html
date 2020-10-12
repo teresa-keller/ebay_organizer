@@ -16,7 +16,7 @@
     <tr th:each="information : ${information}">
         <td>
             <p>
-                <a th:href="@{'/information/index/' + ${information.id}}" th:text="${information.name}"></a>
+                <a th:href="@{'/information/' + ${information.id}}" th:text="${information.name}"></a>
             </p>
         </td>
     </tr>

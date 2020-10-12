@@ -26,16 +26,17 @@ public class Information {
     public String getName() {
         return name;
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         Part filePart = request.getPart("fileToUpload");
         InputStream fileInputStream = filePart.getInputStream();
-        File fileToSave = new File("C:/uploadtemp/" + filePart.getSubmittedFileName());
+        File fileToSave = new File("C:/temp/" + filePart.getSubmittedFileName());
         Files.copy(fileInputStream, fileToSave.toPath(), new CopyOption[]{StandardCopyOption.REPLACE_EXISTING});
         String fileUrl = "http://localhost:8080/uploaded-files/" + filePart.getSubmittedFileName();
-        String name = request.getParameter("name");
-        response.getOutputStream().println("<p>Thanks " + name + "! Here's a link to your uploaded file:</p>");
+//        String name = request.getParameter("name");
+//        response.getOutputStream().println("<p>Thanks " + name + "! Here's a link to your uploaded file:</p>");
         response.getOutputStream().println("<p><a href=\"" + fileUrl + "\">" + fileUrl + "</a></p>");
-        response.getOutputStream().println("<p>Upload another file <a href=\"http://localhost:8080/index.html\">here</a>.</p>");
+//        response.getOutputStream().println("<p>Upload another file <a href=\"http://localhost:8080/index.html\">here</a>.</p>");
     }
 
     public void setName(String name) {
