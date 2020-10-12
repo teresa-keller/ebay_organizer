@@ -22,6 +22,7 @@ public class InformationController {
 
     @GetMapping("/")
     public String displayAllInformation(Model model) {
+        informationRepository.save(new Information());
         model.addAttribute("title", "All Information");
         model.addAttribute("information", informationRepository.findAll());
         return "information/index";
