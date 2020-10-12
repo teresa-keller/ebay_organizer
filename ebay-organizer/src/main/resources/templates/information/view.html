@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<h1 th:text="${'Information: ' + information.name}"></h1>
+<div>
+    <p th:text="${'ID: ' + information.id}"></p>
+    <p th:text="${'Name: ' + information.name}"></p>
+</div>
+<!--<div>-->
+<!--    <form onclick="updateStatus()">Update Status-->
+<!--        <th:block th:field="${listing.status}">-->
+<!--            <select name="status" id="status">-->
+<!--                <option value="Future">Future</option>-->
+<!--                <option value="Currently Listed">Currently Listed</option>-->
+<!--                <option value="Sold">Sold</option>-->
+<!--            </select>-->
+<!--        </th:block>-->
+<!--    </form>-->
+<!--</div>-->
+<br>
+<a href="/information/">Return to Information</a>
+
+</body>
+</html>
