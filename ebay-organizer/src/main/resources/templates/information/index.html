@@ -6,5 +6,21 @@
 </head>
 <body>
 <h1>Important Information</h1>
+<a href="/information/add/">Add Information</a>
+<table>
+    <thead>
+    <tr>
+        <th>File</th>
+    </tr>
+    </thead>
+    <tr th:each="information : ${information}">
+        <td>
+            <p>
+                <a th:href="@{'/information/' + ${information.id}}" th:text="${information.name}"></a>
+            </p>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>

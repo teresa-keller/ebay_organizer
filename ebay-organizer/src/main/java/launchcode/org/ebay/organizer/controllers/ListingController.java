@@ -40,6 +40,7 @@ public class ListingController {
             return "create";
         }
         listingRepository.save(newListing);
+
         model.addAttribute("listing", listingRepository.findAll());
 
         return "redirect:../";
@@ -54,6 +55,7 @@ public class ListingController {
             Listing listing = (Listing) optionalListing.get();
             model.addAttribute("title", ((Listing) optionalListing.get()).getName());
             model.addAttribute("listing", listing);
+            model.addAttribute("status", listing.getStatus());
             return "listings/view";
         } else {
             return "redirect:../";

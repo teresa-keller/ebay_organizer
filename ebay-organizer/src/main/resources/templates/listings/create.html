@@ -19,9 +19,20 @@
     <div><label>Shipping:
         <input th:field="${listing.shipping}" type="number"/>
     </label></div>
-    
+    <div><label>Status:
+        <th:block th:field="${listing.status}" onclick="currentStatus()">
+        <select name="status" id="status">
+            <option value="Future">Future</option>
+            <option value="Currently Listed">Currently Listed</option>
+            <option value="Sold">Sold</option>
+        </select>
+        </th:block>
+    </label></div>
     <input type="submit"/>
 
 </form>
+<div>
+    <a href="/listings/">Return to Listings</a>
+</div>
 </body>
 </html>

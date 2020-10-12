@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<p>Here are your results:</p>
+<div th:each="query : ${queries.results}">
+    <p th:text="${query.query}"></p>
+</div>
+</body>
+</html>

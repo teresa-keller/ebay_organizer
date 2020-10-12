@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Information</title>
+</head>
+<body>
+<form action="/information/" method="post" enctype="multipart/form-data">
+    <p>Enter file name: </p>
+    <input onclick="doPost()" type="file" name="fileToUpload">
+    <input th:field="${information.name}" type="text" name="name" value="name">
+    <embed type="application/pdf" th:src="${information.name}">
+    <br/><br/>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

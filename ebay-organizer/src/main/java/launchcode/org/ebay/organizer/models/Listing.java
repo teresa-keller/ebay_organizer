@@ -16,6 +16,8 @@ public class Listing {
     private String description;
     private double price;
     private double shipping;
+    private String status;
+
 
     public Listing() {
     }
@@ -25,6 +27,29 @@ public class Listing {
         this.description = description;
         this.price = price;
         this.shipping = shipping;
+    }
+
+    public String currentStatus() {
+
+        if (this.status.equals("future")) {
+            this.status = "Future";
+        } else if (this.status.equals("current")) {
+            this.status = "Currently Listed";
+        } else if (this.status.equals("sold")) {
+            this.status = "Sold";
+        }
+        return this.status;
+    }
+
+    public String updateStatus() {
+        if (this.status.equals("future")) {
+            this.status = "Future";
+        } else if (this.status.equals("current")) {
+            this.status = "Currently Listed";
+        } else if (this.status.equals("sold")) {
+            this.status = "Sold";
+        }
+        return this.status;
     }
 
     public String getName() {
@@ -61,5 +86,13 @@ public class Listing {
 
     public int getId() {
         return id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -7,6 +7,7 @@
 <body class="container">
 
 <h1>Listings</h1>
+<a href="/listings/create/">Create Listing</a>
 <table>
     <thead>
         <tr>
@@ -20,11 +21,11 @@
                 <a th:href="@{'/listings/view/' + ${listing.id}}" th:text="${listing.name}"></a>
             </p>
         </td>
-
-
-
+        <td>
+            <p th:text="${listing.status}"></p>
+        </td>
     </tr>
 </table>
-<a href="/listings/create/">Create Listing</a>
+
 </body>
 </html>
