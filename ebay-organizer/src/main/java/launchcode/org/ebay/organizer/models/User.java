@@ -3,6 +3,8 @@ package launchcode.org.ebay.organizer.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -11,8 +13,14 @@ public class User {
     @GeneratedValue
     private int id;
 
+    @NotNull
+    @NotEmpty
     private String username;
+
+    @NotNull
+    @NotEmpty
     private String password;
+    private String matchingPassword;
 
     public User() {
     }
@@ -31,6 +39,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getMatchingPassword() {
+        return matchingPassword;
+    }
+
+    public void setMatchingPassword(String matchingPassword) {
+        this.matchingPassword = matchingPassword;
     }
 
     public int getId() {

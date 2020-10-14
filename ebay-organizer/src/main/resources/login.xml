@@ -1,0 +1,11 @@
+<http>
+    <intercept-url pattern="/**" access="hasRole('USER')" />
+    <form-login />
+    <logout />
+</http>
+
+<http>
+    <intercept-url pattern="/**" access="authenticated"/>
+    <form-login />
+    <http-basic />
+</http>
