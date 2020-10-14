@@ -30,6 +30,7 @@ public class MultiHttpSecurityConfig {
     public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
         protected void configure(HttpSecurity http) throws Exception {
             http
+                    .csrf().disable()
                     .antMatcher("/api/**")
                     .authorizeRequests(authorize -> authorize
                     .anyRequest().hasRole("ADMIN")
@@ -44,6 +45,7 @@ public class MultiHttpSecurityConfig {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
+                    .csrf().disable()
                     .authorizeRequests(authorize -> authorize
                     .anyRequest().authenticated()
                     )
@@ -52,6 +54,7 @@ public class MultiHttpSecurityConfig {
     }
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeRequests(authorize -> authorize
                         .anyRequest().authenticated()
                         .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {

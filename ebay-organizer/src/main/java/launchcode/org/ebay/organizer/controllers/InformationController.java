@@ -58,13 +58,15 @@ public class InformationController {
     public String displayViewInformation(Model model, @PathVariable Integer informationId) {
         model.addAttribute("information", informationRepository.findAll());
 
+        informationRepository.save(new Information());
         Optional optionalInformation = informationRepository.findById(informationId);
         if (optionalInformation.isPresent()) {
             Information information = (Information) optionalInformation.get();
             model.addAttribute("title", ((Information) optionalInformation.get()).getName());
             model.addAttribute("information", information);
-            model.addAttribute("name", information.getName());
-            return "information/index/view";
+            model.addAttribute("name", ((Information) optionalInformation.get()).getName());
+            model.addAttribute("id", ((Information) optionalInformation.get()).getId());
+            return "information/view";
         } else {
             return "redirect:../";
         }
