@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https.thymeleaf.org/">
+<html lang="en" xmlns:th="https.thymeleaf.org/"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8"/>
     <title></title>
@@ -7,9 +8,9 @@
 <body>
 <h1>Home Page</h1>
 <ul>
-    <li><a href="/listings">Listings</a></li>
-    <li><a href="/information/">Important Information</a></li>
-    <li><a href="/search">Search</a></li>
+    <li><a th:href="@{/listings}">Listings</a></li>
+    <li><a th:href="@{/information/}">Important Information</a></li>
+    <li><a th:href="@{/search}">Search</a></li>
 </ul>
 </body>
 </html>

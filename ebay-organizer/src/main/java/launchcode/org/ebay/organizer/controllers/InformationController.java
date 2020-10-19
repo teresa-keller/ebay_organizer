@@ -63,10 +63,10 @@ public class InformationController {
         if (optionalInformation.isPresent()) {
             Information information = (Information) optionalInformation.get();
             model.addAttribute("title", ((Information) optionalInformation.get()).getName());
-            model.addAttribute("information", information);
+            model.addAttribute("information", optionalInformation.get());
             model.addAttribute("name", ((Information) optionalInformation.get()).getName());
             model.addAttribute("id", ((Information) optionalInformation.get()).getId());
-            return "information/view";
+            return "information/view/{informationID}";
         } else {
             return "redirect:../";
         }

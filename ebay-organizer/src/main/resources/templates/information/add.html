@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https.thymeleaf.org/">
+<html lang="en" xmlns:th="https.thymeleaf.org/"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8"/>
     <title>Add Information</title>
@@ -7,7 +8,7 @@
 <body>
 <form action="/information/" method="post" enctype="multipart/form-data">
     <p>Enter file name: </p>
-    <input onclick="doPost()" type="file" name="fileToUpload" src="/resources/static.images/">
+    <input onclick="doPost()" type="file">
     <input th:field="${information.name}" type="text" name="name" value="name">
     <embed type="application/pdf" th:src="${information.name}">
     <br/><br/>
